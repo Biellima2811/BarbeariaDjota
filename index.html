@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barbearia Djota - O melhor corte da região.">
+    <title>Barbearia Djota | Estilo e Tradição</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="assets/img/Logo.png" alt="Barbearia Djota" class="logo-img">
+                <!--<h1>DJOTA<span>.</span></h1>-->
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#horarios">Horários</a></li>
+                    <li><a href="#agendamento" class="btn-nav">Agendar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="overlay"></div>
+        <div class="container hero-content">
+            <h2>Estilo que impõe respeito</h2>
+            <p>Profissionalismo, ambiente clássico e o corte perfeito para você.</p>
+            <a href="#agendamento" class="btn-primary">Marcar Horário</a>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <p class="subtitle">Selecione o que você deseja fazer:</p>
+            
+            <div class="grid-servicos">
+                <label class="card-servico">
+                    <input type="checkbox" value="Corte de Cabelo" class="chk-servico">
+                    <div class="card-content">
+                        <h3>Corte na Tesoura/Máquina</h3>
+                        <p>Acabamento perfeito e estilo moderno.</p>
+                        <span class="price">R$ 35,00</span>
+                    </div>
+                </label>
+
+                <label class="card-servico">
+                    <input type="checkbox" value="Barba Modelada" class="chk-servico">
+                    <div class="card-content">
+                        <h3>Barba Modelada</h3>
+                        <p>Toalha quente e navalha afiada.</p>
+                        <span class="price">R$ 25,00</span>
+                    </div>
+                </label>
+
+                <label class="card-servico">
+                    <input type="checkbox" value="Combo (Corte + Barba)" class="chk-servico">
+                    <div class="card-content">
+                        <h3>Combo Completo</h3>
+                        <p>Cabelo + Barba (Desconto Especial).</p>
+                        <span class="price">R$ 50,00</span>
+                    </div>
+                </label>
+
+                <label class="card-servico">
+                    <input type="checkbox" value="Navalhado / Degradê" class="chk-servico">
+                    <div class="card-content">
+                        <h3>Navalhado / Degradê</h3>
+                        <p>O detalhe que faz a diferença.</p>
+                        <span class="price">R$ 40,00</span>
+                    </div>
+                </label>
+                
+                 </div>
+        </div>
+    </section>
+
+    <section id="horarios">
+        <div class="container">
+            <h2 class="section-title">Horário de Funcionamento</h2>
+            <div class="tabela-horarios">
+                <div class="dia-row">
+                    <span class="dia">Segunda-feira</span>
+                    <span class="hora">16:00 às 19:30</span>
+                </div>
+                <div class="dia-row destaque">
+                    <span class="dia">Terça a Sexta</span>
+                    <span class="hora">09:00 às 12:00 <br> 16:00 às 19:30</span>
+                </div>
+                <div class="dia-row">
+                    <span class="dia">Sábado</span>
+                    <span class="hora">09:00 às 19:00</span>
+                </div>
+                <div class="dia-row fechado">
+                    <span class="dia">Domingo</span>
+                    <span class="hora">Fechado</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agendamento">
+        <div class="container">
+            <div class="form-box">
+                <h2>📅 Agendamento Rápido</h2>
+                <p>Preencha os dados e finalize no WhatsApp.</p>
+                
+                <form id="formAgenda" onsubmit="enviarWhatsApp(event)">
+                    <div class="input-group">
+                        <label>Seu Nome:</label>
+                        <input type="text" id="clienteNome" placeholder="Ex: João Silva" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Dia Preferido:</label>
+                        <select id="dataDia" required>
+                            <option value="" disabled selected>Selecione...</option>
+                            <option value="Segunda-feira">Segunda-feira</option>
+                            <option value="Terça-feira">Terça-feira</option>
+                            <option value="Quarta-feira">Quarta-feira</option>
+                            <option value="Quinta-feira">Quinta-feira</option>
+                            <option value="Sexta-feira">Sexta-feira</option>
+                            <option value="Sábado">Sábado</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Horário (verifique a tabela acima):</label>
+                        <input type="time" id="dataHora" required>
+                    </div>
+
+                    <button type="submit" class="btn-whatsapp">
+                        Confirmar via WhatsApp <span style="font-size:1.2rem">➤</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Barbearia Djota. Todos os direitos reservados.</p>
+            <p>📍 Rua Rosa Leite Oliveira, 1027 - Bairro Jardim Guanabara</p>
+            
+            <div class="social-links" style="margin-top: 15px;">
+                <a href="https://www.instagram.com/barbeariadjota?igsh=ZmloYWszZXNteTBu" target="_blank" style="color: #d4af37; font-size: 1.5rem; text-decoration: none;">
+                    <i class="fab fa-instagram"></i> Siga no Instagram
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function enviarWhatsApp(event) {
+            event.preventDefault();
+
+            // 1. Pega os dados
+            const nome = document.getElementById('clienteNome').value;
+            const dia = document.getElementById('dataDia').value;
+            const horaString = document.getElementById('dataHora').value;
+            
+            // 2. Validação de Horário (A NOVA REGRA)
+            if (!validarHorario(dia, horaString)) {
+                return; // Para tudo se o horário for inválido
+            }
+
+            // 3. Pega serviços selecionados
+            let servicosSelecionados = [];
+            document.querySelectorAll('.chk-servico:checked').forEach((checkbox) => {
+                servicosSelecionados.push(checkbox.value);
+            });
+
+            if (servicosSelecionados.length === 0) {
+                alert("Por favor, selecione pelo menos um serviço acima!");
+                window.location.href = "#servicos";
+                return;
+            }
+
+            const servicosTexto = servicosSelecionados.join(', ');
+
+            // 4. Monta a mensagem
+            const telefoneDjota = "5585991374797";
+            
+            const mensagem = `*💈 NOVO AGENDAMENTO - DJOTA*\n\n` +
+                             `👤 *Cliente:* ${nome}\n` +
+                             `✂️ *Serviço:* ${servicosTexto}\n` +
+                             `📅 *Dia:* ${dia}\n` +
+                             `⏰ *Hora:* ${horaString}\n\n` +
+                             `Aguardo confirmação!`;
+
+            // 5. Cria o link e abre
+            const url = `https://wa.me/${telefoneDjota}?text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+        }
+
+        // Função auxiliar para converter "14:30" em minutos (ex: 870)
+        function horaParaMinutos(horaStr) {
+            const [hora, minuto] = horaStr.split(':').map(Number);
+            return hora * 60 + minuto;
+        }
+
+        function validarHorario(dia, horaStr) {
+            const minutos = horaParaMinutos(horaStr);
+            
+            // Definição dos horários em minutos
+            // 09:00 = 540 | 12:00 = 720
+            // 16:00 = 960 | 19:00 = 1140 | 19:30 = 1170
+            
+            let valido = false;
+            let mensagemErro = "";
+
+            if (dia === "Segunda-feira") {
+                // Seg: 16:00 às 19:30
+                if (minutos >= 960 && minutos <= 1170) valido = true;
+                else mensagemErro = "Na Segunda, atendemos apenas das 16:00 às 19:30.";
+            } 
+            else if (dia === "Sábado") {
+                // Sáb: 09:00 às 19:00 (Direto? Assumi direto pelo seu texto, se tiver almoço avise)
+                if (minutos >= 540 && minutos <= 1140) valido = true;
+                else mensagemErro = "No Sábado, atendemos das 09:00 às 19:00.";
+            } 
+            else {
+                // Terça a Sexta
+                // Manhã: 09:00 - 12:00 OU Tarde: 16:00 - 19:30
+                const manha = (minutos >= 540 && minutos <= 720);
+                const tarde = (minutos >= 960 && minutos <= 1170);
+                
+                if (manha || tarde) valido = true;
+                else mensagemErro = "Nesse dia, atendemos das 09h-12h e 16h-19:30h (fechado para almoço).";
+            }
+
+            if (!valido) {
+                alert("⚠️ Horário Indisponível!\n\n" + mensagemErro);
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+</html>
