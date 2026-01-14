@@ -129,3 +129,75 @@ footer p { color: #666; margin-bottom: 10px; }
     display: block;
     object-fit: contain;
 }
+
+/* --- NOVO RODAPÉ COM MAPA --- */
+
+/* Grid que divide em 2 colunas */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas partes iguais */
+    gap: 30px;
+    align-items: center;
+    text-align: left; /* Alinha texto à esquerda */
+}
+
+/* Ajustes do texto */
+.footer-info p {
+    margin-bottom: 5px;
+    color: #888;
+}
+
+/* Ajustes do Mapa */
+.footer-map {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden; /* Arredonda os cantos do mapa */
+    border: 2px solid #333;
+    transition: 0.3s;
+}
+
+.footer-map:hover {
+    border-color: var(--gold); /* Fica dourado quando passa o mouse */
+    transform: scale(1.02);
+}
+
+.footer-map iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* RESPONSIVO (Celular) */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Vira uma coluna só */
+        text-align: center; /* Centraliza tudo no mobile */
+    }
+    
+    .footer-info {
+        margin-bottom: 20px;
+    }
+}
+
+/* CRÉDITOS DO DESENVOLVEDOR */
+.developer-credit {
+    margin-top: 40px;          /* Espaço do mapa */
+    padding-top: 20px;         /* Espaço interno */
+    border-top: 1px solid #333; /* Linha fina cinza */
+    text-align: center;        /* Centraliza o texto */
+    font-size: 0.9rem;         /* Letra levemente menor */
+    color: #666;
+}
+
+.developer-credit a {
+    color: var(--gold);        /* Nome em dourado */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.developer-credit a:hover {
+    color: #fff;               /* Fica branco ao passar o mouse */
+    text-decoration: underline;
+}
